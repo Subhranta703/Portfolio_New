@@ -1,0 +1,19 @@
+.projects {
+    padding: 60px 20px;
+    background: #111;
+    text-align: center;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .project {
+    background: #222;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  
