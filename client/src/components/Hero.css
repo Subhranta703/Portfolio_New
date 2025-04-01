@@ -22,18 +22,21 @@
   padding: 12px 5%;
   box-shadow: 0 4px 10px rgba(255, 204, 0, 0.2);
   z-index: 1000;
+  margin-right: 60px;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-left: 70px;
   color: #ffcc00;
 }
 
 /* Navbar Links */
 .nav-links {
   display: flex;
-  gap: 15px;
+  gap: 10px;
+  
 }
 
 .nav-links a {
@@ -201,9 +204,9 @@
     flex-direction: column;
     background: rgba(13, 17, 23, 0.95);
     position: absolute;
-    top: 50px;
-    right: 0;
-    width: 200px;
+    top: 55px;
+    right: 30px;
+    width: 110px;
     padding: 15px;
     text-align: right;
   }

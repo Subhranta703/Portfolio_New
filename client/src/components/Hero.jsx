@@ -2,6 +2,13 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import { useRef, useState } from "react";
 import Subhranta from "../assets/Pic.jpg";
+
+// import About from "./components/About";
+// import Skills from "./components/Skills";
+// import Projects from "./components/Projects";
+// import Contact from "./components/Contact";
+// import Experience from "./components/Experience";
+
 import "./Hero.css";
 
 // 3D Model Component
@@ -21,16 +28,22 @@ const Model = () => {
 const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false); // Navbar Toggle State
 
+  // Smooth Scroll to Sections
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setMenuOpen(false); // Close menu on mobile after clicking
+  };
+
   return (
     <div className="hero">
       {/* Navbar */}
       <nav className="navbar">
         <h2 className="logo">SN</h2>
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+          <a onClick={() => scrollToSection("about")}>About</a>
+          <a onClick={() => scrollToSection("projects")}>Projects</a>
+          <a onClick={() => scrollToSection("skills")}>Skills</a>
+          <a onClick={() => scrollToSection("contact")}>Contact</a>
         </div>
         <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
@@ -41,9 +54,11 @@ const Hero = () => {
       <div className="hero-content">
         {/* Left: Text */}
         <div className="hero-text">
-          <h1>Subhranta Nayak</h1>
+          <h1>Subhranta Kumar  Nayak</h1>
           <p>Full Stack Developer | MERN | Open Source Contributor</p>
-          <a href="#contact" className="btn contact-btn">Contact Me</a>
+          <a onClick={() => scrollToSection("contact")} className="btn contact-btn">
+            Connect Me ⬇️
+          </a>
 
           {/* Social Links */}
           <div className="social-links">
